@@ -1,0 +1,45 @@
+<% if flash[:errors] %>
+    <div id="error_explanation" style="font-weight: bold;">
+        <h2>
+            <%= pluralize(flash[:errors].count, "error") %>
+            prohibited this user from being saved:
+        </h2>
+    
+        <% flash[:errors].each do |message| %>
+            <p style="color: black;">
+                <%= message %>
+            </p>
+        <% end %>
+    </div>
+<% end %>
+
+<%= form_for @user do |form| %>
+    <div class="field">
+        <%= form.label :username, class: "label"%>
+        <%= form.text_field :username, class: "input"%>
+    </div>
+
+    <div class="field">
+        <%= form.label :password, class: "label"%>
+        <%= form.password_field :password, class: "input"%>
+    </div>
+
+    <div class="field">
+        <%= form.label :first_name, class: "label"%>
+        <%= form.text_field :first_name, class: "input"%>
+    </div>
+
+    <div class="field">
+        <%= form.label :last_name, class: "label"%>
+        <%= form.text_field :last_name, class: "input"%>
+    </div>
+
+    <div class="field">
+        <%= form.label :photo_url, class: "label"%>
+        <%= form.text_field :photo_url, class: "input"%>
+    </div>
+
+    <div class="button">
+        <%= form.submit 'Submit User', class: "button-is-primary" %>
+    </div>
+<% end %>

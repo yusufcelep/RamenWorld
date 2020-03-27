@@ -1,0 +1,20 @@
+<h1 class= "label" style="text-align: center; background-color: #011F2E; color: #fff;">
+    New Recommendation
+</h1>
+
+<br>
+
+<%= render 'form', recommendation: @recommendation %>
+
+<br>
+<br>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>
+                <%= link_to 'Back to User', user_path(@current_user) %>
+            </strong>
+        </p>
+    </div>
+</footer>

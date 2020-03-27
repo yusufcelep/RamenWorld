@@ -1,0 +1,100 @@
+<script src="https://kit.fontawesome.com/edd69e9b57.js" crossorigin="anonymous"></script>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item">
+            <i class="fab fa-tencent-weibo fa-3x"></i>    
+        </a>
+    </div>
+
+    <div id="navbar" class="navbar-menu">
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="http://localhost:3000/shops">
+                    Ramen Shops
+                </a>
+
+                <a class="navbar-item" href="http://localhost:3000/shop_reviews">
+                    My Reviews
+                </a>
+
+                <a class="navbar-item" href="http://localhost:3000/recommendations">
+                    My Recommendations
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="http://localhost:3000/login">
+                            <strong>Log Out</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<h1 class= "label" style="text-align: center; background-color: #011F2E; color: #fff;">
+    <strong style="color: #fff;">
+        Current User
+    </strong>
+</h1>
+
+<div style="text-align: center;">
+
+    <% if params[:id].to_i != @current_user.id %>
+        <p>
+            <img class="is-rounded" width="275" height="275" src=<%= @user.photo_url %> />
+        </p>
+
+        <p>
+            <h1 style="font-size: 20px;">
+                <strong>
+                    Name: <%= @user.full_name %>
+                </strong>
+            </h1>
+        </p>
+
+        <br>
+
+        <h1>
+            <%= link_to 'Back to User', user_path(@current_user) %>
+        </h1>
+    <% else %>
+        <p>
+            <img class="is-rounded" width="275" height="275" src=<%= @user.photo_url %> />
+        </p>
+    
+        <p>
+            <h1 style="font-size: 20px;">
+                <strong>
+                    Name: <%= @user.full_name %>
+                </strong>
+            </h1>
+        </p>
+
+        <br>
+
+        <a class="button"><%= button_to 'Edit', edit_user_path(@user), method: :get, class: "button-is-primary" %></a>
+        <a class="button"><%= button_to 'Delete User', user_path(@user), method: :delete, class: "button-is-primary" %></a>
+
+        <br>
+        <br>
+        <br>
+
+    <% end %> 
+</div>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>
+                <%= link_to 'View Ramen Shops', shops_path%> |
+                <%= link_to 'My Reviews', shop_reviews_path %> |
+                <%= link_to 'My Recommendations', recommendations_path %>
+            </strong>
+        </p>
+    </div>
+</footer>

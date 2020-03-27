@@ -1,0 +1,65 @@
+<style>
+    .hero {
+        background: black url(https://media3.giphy.com/media/THWoIMFpR9HDtkcFUe/giphy.gif) center / cover;
+    }
+</style>
+
+<section class="hero is-fullheight">
+
+<% if flash[:errors] %>
+    <div id="error_explanation" style="font-weight: bold;">
+        <h2><%= pluralize(flash[:errors].count, "error") %>
+            prohibited login:
+        </h2>
+      
+        <% flash[:errors].each do |message| %>
+            <p style="color: black;">
+                <%= message %>
+            </p>
+        <% end %>
+    </div>
+<% end %>
+
+<div class="card">
+    <div class="card-content">
+        <header class="card-header">
+            <p class="card-header-title">
+                Returning User?
+            </p>
+        </header>
+
+        <p class="field">
+            <%= form_tag '/login', class: "field" do %>
+                <%= label_tag :username, nil, class: "label" %>
+                <%= text_field_tag :username, nil, class: "input" %>
+    
+                <%= label_tag :password, nil, class: "label" %>
+                <%= password_field_tag :password, nil, class: "input" %>
+
+                <%= submit_tag 'Login', class: "button-is-primary"%>
+            <% end %>
+        </p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-content">
+        <header class="card-header">
+            <p class="card-header-title">
+                New User?
+            </p>
+        </header>
+
+        <p>
+            <br>
+            Create An Account Today!
+        </p>
+        <br>
+
+        <footer class="card-footer">
+            <p class="card-footer-item">
+                <a href="http://localhost:3000/signup" class="card-footer-item">Sign Up</a>
+            </p>
+        </footer>
+    </div>
+</div>

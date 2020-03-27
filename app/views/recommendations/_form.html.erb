@@ -1,0 +1,73 @@
+<script src="https://kit.fontawesome.com/edd69e9b57.js" crossorigin="anonymous"></script>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item">
+            <i class="fab fa-tencent-weibo fa-3x"></i>    
+        </a>
+    </div>
+
+    <div id="navbar" class="navbar-menu">
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="http://localhost:3000/shops">
+                    Ramen Shops
+                </a>
+
+                <a class="navbar-item" href="http://localhost:3000/shop_reviews">
+                    My Reviews
+                </a>
+
+                <a class="navbar-item" href="http://localhost:3000/recommendations">
+                    My Recommendations
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div>
+                        <a class="navbar-item">
+                            Back To User
+                        </a>
+                    </div>
+
+                    <div class="buttons">
+                        <a class="button is-primary" href="http://localhost:3000/login">
+                            <strong>Log Out</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<% if flash[:errors] %>
+    <div id="error_explanation" style="font-weight: bold;">
+        <h2><%= pluralize(flash[:errors].count, "error") %>
+            prohibited this recommendation from being saved:
+        </h2>
+      
+        <% flash[:errors].each do |message| %>
+            <p style="color: black;">
+                <%= message %>
+            </p>
+        <% end %>
+    </div>
+<% end %>
+
+<%= form_for @recommendation do |form| %>
+    <div class="select is-multiple">
+        <%= form.label "Ramen", class: "label"%>
+        <%= form.collection_select :ramen_id, Ramen.all, :id, :shop_and_location, prompt: true, class: "input"%> 
+    </div>
+
+    <div class="field">
+        <%= form.label :comments, class: "label"%>
+        <%= form.text_field :comments, class: "input"%>
+    </div>
+
+    <div class="button">
+        <%= form.submit "Submit Recommendation", class: "button-is-primary"%>
+    </div>
+<% end %>

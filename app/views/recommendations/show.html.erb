@@ -1,0 +1,73 @@
+<script src="https://kit.fontawesome.com/edd69e9b57.js" crossorigin="anonymous"></script>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item">
+            <i class="fab fa-tencent-weibo fa-3x"></i>    
+        </a>
+    </div>
+
+    <div id="navbar" class="navbar-menu">
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="http://localhost:3000/shops">
+                    Ramen Shops
+                </a>
+
+                <a class="navbar-item" href="http://localhost:3000/shop_reviews">
+                    My Reviews
+                </a>
+
+                <a class="navbar-item" href="http://localhost:3000/recommendations">
+                    My Recommendations
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div>
+                        <a class="navbar-item">
+                            Back To User
+                        </a>
+                    </div>
+
+                    <div class="buttons">
+                        <a class="button is-primary" href="http://localhost:3000/login">
+                            <strong>Log Out</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<h1 class= "label" style="text-align: center; background-color: #011F2E; color: #fff;">
+    <strong style="color: #fff;">
+        Current Recommendation
+    </strong>
+</h1>
+
+<p>
+    <strong>
+        User: <%= @recommendation.user_id %>
+    </strong>
+</p>
+
+<p>
+    <strong>
+        Ramen: <%= @recommendation.ramen_id %>
+    </strong>
+</p>
+
+<p>
+    <strong>
+        Comments: <%= @recommendation.comments %>
+    </strong>
+</p>
+
+<h1>
+    <%= link_to 'Edit', edit_recommendation_path(@recommendation) %> |
+    <%= link_to 'Back', recommendations_path %>
+</h1>
+
