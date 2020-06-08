@@ -3,6 +3,8 @@
 Welcome to Ramen World, the web application that connects Ramen lovers with their life!
 The seed file contains the class of Flatiron Chicago SE Cohort 021720 along with special guest Naruto Uzumaki, Lord Voldemort, and Professor Dumbledore. The shops and ramens you will find are all real (except for 'Ichiraku Ramen') and the addresses are accurate. The data was hand picked and inputed from 'https://chicago.eater.com/maps/best-ramen-restaurants-chicago', some of the photos are from 'TripAdvisor', 'Yelp', and 'Google'.
 
+# Demo
+![Ramen_World](https://github.com/yusufcelep/modtwoproject/blob/master/app/assets/images/Ramen_World.mov?raw=true)
 
 
 # Schema Diagram/Model:
@@ -52,5 +54,3 @@ https://github.com/yusufcelep
 - https://fontawesome.com/
 - https://chicago.eater.com/maps/best-ramen-restaurants-chicago
 - https://bulma.io/
-- 
-
