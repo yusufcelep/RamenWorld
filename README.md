@@ -1,7 +1,7 @@
-# Flatiron Module 2 Project
+<h1 align="center">Ramen World</h1>
 
 Welcome to Ramen World, the web application that connects Ramen lovers with their life!
-The seed file contains the class of Flatiron Chicago SE Cohort 021720 along with special guest Naruto Uzumaki, Lord Voldemort, and Professor Dumbledore. The shops and ramens you will find are all real (except for 'Ichiraku Ramen') and the addresses are accurate. The data was hand picked and inputed from 'https://chicago.eater.com/maps/best-ramen-restaurants-chicago', some of the photos are from 'TripAdvisor', 'Yelp', and 'Google'.
+The shops and ramens you will find are all real (except for 'Ichiraku Ramen') and the addresses are accurate. The data was hand picked and inputed from 'https://chicago.eater.com/maps/best-ramen-restaurants-chicago', some of the photos are from 'TripAdvisor', 'Yelp', and 'Google'.
 
 # Demo
 ![Ramen_World](https://github.com/yusufcelep/modtwoproject/blob/master/app/assets/images/Ramen_World.gif?raw=true)
@@ -23,26 +23,16 @@ The seed file contains the class of Flatiron Chicago SE Cohort 021720 along with
 - Email Verification
 - Pagination
 
+# Installing:
+- Clone this repository into your desired location with the Terminal
+- cd into the file you just created
+- Run 'bundle install'
+- Run 'rails db:migrate'
+- Run 'rails db:seed'
+- Run 'rails s' and on your browser, navigate to 'localhost:3000'
+- Create your account! 
 
-# Requirements:
-- You should have at least five models. You do not have to have all of these built out on day one. But by the end of the week, you should have at least five models.
-- Some methods in your models. There should be at least twenty methods total in your models. These are to be used to better extract data from your tables. Think Flatiron BnB Lab
-- No APIs until you get approval from an instructor. The reason is because API's oftentimes leads you to learning the specific API really well, but not learning Rails that well. Rails is a more transferable skill. So stick with that.
-- Specs - there should be at least 10 specs in your project (five per person).
-- An analytics page - The main learning goal of this is to get you to write some interesting activerecord queries.
-- No JavaScript. Stay focused on Rails for this project - we'll have plenty of time this semeseter to cover JS topics.
-
-
-# Instructions:
-1.) Clone this repository into your desired location with the Terminal
-2.) cd into the file you just created
-3.) Run 'bundle install'
-4.) Run 'rails db:migrate'
-5.) Run 'rails db:seed'
-6.) Run 'rails s' and on your browser, navigate to 'localhost:3000'
-7.) Create your account! 
-
-If you would like to test the application:
+If you would like to just test the application:
 Username: hokage
 Password: password
 
